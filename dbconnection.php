@@ -1,8 +1,10 @@
 <?php
-#echo "dbconnection.php page";
-$mydbhost = 'localhost';
-$mydbuser = 'admin';
-$mydbpassword = 'mydb@123';
-$mydbname = 'it350db';
-$dbonnection = new mysqli($mydbhost, $mydbuser, $mydbpassword, $mydbname) or die('Error while trying to connect.');
-?>
+$server = "localhost";
+$database = "it350db";
+$username = "admin";
+$password = "mydb@123";
+$db = mysqli_connect($server, $username, $password, $database);
+if(!$db){
+	die("Database Connection Failed".mysqli_error($db));
+}
+?> 
