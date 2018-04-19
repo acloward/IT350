@@ -18,6 +18,7 @@
 		<div style="margin-left:1%">
     <a href="mysession.php"><button class="mybutton">View</button></a><br>
     <a href="addproductsform.php"><button class="mybutton">Product</button></a><br>
+    <a href="dbasession.php"><button class="mybutton">DBA site</button></a><br>
   	<a href="logout.php"><button class="mybutton">LogOut</button></a><br>
   </div>
 	<div style="margin-left:10%">

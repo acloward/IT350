@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+ 
 <?php
 include("dbconnection.php");
 session_start();
@@ -9,10 +9,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
-   # $hashpw = sha1($mypassword);
+    $Fmypassword = filter_var($mypassword, FILTER_SANITIZE_STRING);
 echo "test 1.1";
 print "<br>";
-    $query = "SELECT * FROM Admin WHERE username = '$myusername' and password = '$mypassword'";
+    $query = "SELECT * FROM Admin WHERE username = '$myusername' and password = '$Fmypassword'";
     $result = mysqli_query($db,$query);
 
     $count = mysqli_num_rows($result);

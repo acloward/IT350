@@ -39,7 +39,7 @@ CREATE TABLE Orders (
 );
 
 CREATE TABLE Product (
-	p_id int NOT NULL , 
+	p_ id int NOT NULL , 
 	p_name varchar(255) NOT NULL ,
 	p_type varchar(255) NOT NULL , 
 	p_color varchar(255) NOT NULL ,

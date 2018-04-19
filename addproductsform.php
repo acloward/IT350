@@ -52,7 +52,7 @@ session_start();
 	</div>
 	<div style="margin-left:25%">
 		<div style="align:center;display:inline-block;background-color:#006400;color:White;width:15%;">
-			<form action="addproducts.php" method="post">
+			<form action="addproducts2.php" method="post">
 				<fieldset>
 					Product ID:<br>
 					<input type="text" name="pid"><br>

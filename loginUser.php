@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+ 
 <?php
 include("dbconnection.php");
 session_start();
@@ -9,10 +9,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
-   # $hashpw = sha1($mypassword);
-echo "test 1.1";
+$Fmypassword = filter_var($mypassword, FILTER_SANITIZE_STRING);echo "test 1.1";
 print "<br>";
-    $query = "SELECT * FROM Admin WHERE username = '$myusername' and password = '$mypassword'";
+    $query = "SELECT * FROM Customer WHERE email = '$myusername' and password = '$Fmypassword'";
     $result = mysqli_query($db,$query);
 
     $count = mysqli_num_rows($result);
@@ -24,9 +23,9 @@ print "<br>";
       $_SESSION['active'] = 1;
 echo "test 2";
 print "<br>";
-      $sql = "UPDATE Admin SET active = 1 WHERE username = '$myusername'";
+      $sql = "UPDATE Customer SET active = 1 WHERE email = '$myusername'";
       mysqli_query($db, $sql);
-      header("location:mysession.php");
+      header("location:usersession.php");
 echo "test 2.1";
 print "<br>";
     }
@@ -45,11 +44,11 @@ print "<br>";
 </head>
 <body>
 <?php include('navbar.php');?>
- <h1> Admin Login page </h1>
+ <h1> Customer Login page </h1>
   <section class="banner1">
-    <form action="login.php" id="loginform" method="post">
+    <form action="loginUser.php" id="loginform" method="post">
       <div class="container">
-        <label class="contactfield"><b>Username</b></label>
+        <label class="contactfield"><b>Email</b></label>
         <input type="text" placeholder="Username" name="username" required>
         <br>
         <label class="contactfield"><b>Password </b></label>

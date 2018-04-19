@@ -1,0 +1,15 @@
+
+● apache2.service - LSB: Apache2 web server
+   Loaded: loaded (/etc/init.d/apache2; bad; vendor preset: enabled)
+  Drop-In: /lib/systemd/system/apache2.service.d
+           └─apache2-systemd.conf
+   Active: active (running) since Tue 2018-04-17 23:44:54 EDT; 1 day 11h ago
+     Docs: man:systemd-sysv-generator(8)
+  Process: 25321 ExecReload=/etc/init.d/apache2 reload (code=exited, status=0/SU
+   CGroup: /system.slice/apache2.service
+           ├─ 1254 /usr/sbin/apache2 -k start
+           ├─25341 /usr/sbin/apache2 -k start
+           ├─25503 /usr/sbin/apache2 -k start
+           ├─25511 /usr/sbin/apache2 -k start
+           ├─25513 /usr/sbin/apache2 -k start
+           └─25514 /usr/sbin/apache2 -k start
